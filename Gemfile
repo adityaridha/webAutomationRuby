@@ -10,7 +10,6 @@ group :test do
   # ...
   gem 'selenium-webdriver'
   gem 'site_prism'
-  gem 'rspec-rails'
   gem 'capybara'
   # ...
 end

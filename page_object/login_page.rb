@@ -1,33 +1,17 @@
-require 'capybara'
-require 'capybara/cucumber'
-require 'selenium-webdriver'
-require 'site_prism'
-
-Capybara.default_driver = :selenium
-
 class Login < SitePrism::Page
 
 	set_url "https://live.hub3c.com"
   element :username_field, "input#Email"
   element :password_field, "input#Password"
+  element :register_link, :xpath, "//a[contains(text(),'Reg')]"
+  element :forgot_password_link, :xpath, "//a[contains(text(),'Forgot')]"
 
   def log_in(username, password)
-    # Capybara command
-    # fill_in('Email', with: username)
-    # fill_in('Password', with: password)
-
-    # Siteprism command
     username_field.set(username)
     password_field.set(password)
+    puts ("this is the result : #{register_link.text}")
+    puts ("this is the result : #{forgot_password_link.text}")
     click_on('Log in')
-  end
-
-  def test_connection
-    puts "connect to login model"
-  end
-
-  def verify_login
-    expect(page).to have_button('Save')
   end
 
 

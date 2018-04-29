@@ -14,5 +14,4 @@ Then(/^Login success$/) do
   @dashboard = Dashboard.new
   expect(@dashboard).to be_displayed
   expect(@dashboard).to have_dashboard_title
-  expect(@dashboard).to have_dummy_title
 end
