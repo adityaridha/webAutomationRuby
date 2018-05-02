@@ -15,3 +15,8 @@ Then(/^Login success$/) do
   expect(@dashboard).to be_displayed
   expect(@dashboard).to have_dashboard_title
 end
+
+Then(/^Login Failed/) do
+  expect(@home).to have_content('Invalid')
+  page.has_content?("credentiaLS")
+end

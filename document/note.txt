@@ -1,0 +1,8 @@
+  
+  Verifying content method
+
+  Rspec command
+  expect(@home).to have_content('Invalid')
+
+  Capybara command
+  page.has_content?("credentiaLS") #It seems that this verification is not case sensitive
