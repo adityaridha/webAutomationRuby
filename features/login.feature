@@ -13,6 +13,7 @@ Scenario: Login with invalid email and password
 
 Scenario: Login with invalid email and password 3times
     Given I navigate to the hub homepage
-    When I fill email with "bellacamilla@gmail.com" and password with "ZXasqw12"
+    When I fill email with "bellacamill" and password with "ZXasqw12"
     Then Login Failed
+
     
