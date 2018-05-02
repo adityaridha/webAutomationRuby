@@ -16,6 +16,3 @@ class Login < SitePrism::Page
 
 
 end
-
-login = Login.new
-login.test_connection
